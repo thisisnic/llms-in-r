@@ -5,6 +5,7 @@ project:
 book:
   title: "LLMs in R"
   chapters:
+    - index.qmd
     - 01-introduction.qmd
     - part: "Getting Started"
       chapters:
