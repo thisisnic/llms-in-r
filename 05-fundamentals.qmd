@@ -1,0 +1,11 @@
+# Fundamentals of Working with LLMs
+
+<!-- Basic LLM capabilities and prompt engineering fundamentals -->
+
+## Prompt engineering
+
+## Resources
+
+<!-- 
+This has some links to some excellent external resources too: https://ellmer.tidyverse.org/articles/prompt-design.html
+-->
