@@ -1,0 +1,101 @@
+# Chapter Planning Template: Explanation
+
+<!-- 
+
+Initial draft of chapter planning template which aims to guide the writer in creating content which falls withing the Diataxis "explanation" definition: https://diataxis.fr/explanation/
+-->
+
+## Chapter Scope Definition
+
+<!-- What specific topic or concept will this chapter help readers understand?
+     Keep focused - avoid trying to explain everything at once. -->
+
+**Core question this chapter answers:**
+
+**Key understanding readers will gain:**
+
+## Context and Background
+<!-- What context do readers need to truly understand this topic?  
+Consider history, evolution, why this topic exists. -->
+
+**Historical background:**
+
+**Why this topic matters:**
+
+**Connection to broader domain:**
+
+## Conceptual Foundation
+<!-- What are the fundamental ideas readers must grasp?
+     Think about mental models, analogies, core principles. -->
+
+**Main concepts to explain:**
+-
+-
+-
+
+**Best analogies or metaphors:**
+
+**Mental models to build:**
+
+## Design and Decision Space
+<!-- What choices exist in this domain? Why were certain decisions made?
+     This is where you embrace perspective and discuss trade-offs. -->
+
+**Key design decisions to explain:**
+
+**Alternative approaches to discuss:**
+
+**Trade-offs to acknowledge:**
+
+## Connections and Relationships
+
+<!-- How does this topic connect to other concepts?
+     Build the "web of understanding" across domains. -->
+
+**Related concepts to link:**
+
+**Interdependencies to highlight:**
+
+**Broader ecosystem connections:**
+
+## Perspective and Opinion
+<!-- Where can you offer judgment, opinion, or different viewpoints?
+     Explanation documentation embraces perspective. -->
+
+**Your viewpoint on this topic:**
+
+**Alternative perspectives to acknowledge:**
+
+**Judgments you can make:**
+
+## Boundaries and Constraints
+<!-- What are the limits of this topic? What should readers be aware of?
+     Include gotchas, limitations, considerations. -->
+
+**Important limitations:**
+
+**Common misunderstandings:**
+
+**Constraints to discuss:**
+
+## Further Understanding
+<!-- What would deepen readers' understanding beyond this chapter?
+     Links to other explanations, not tutorials or how-tos. -->
+
+**Related explanation topics:**
+
+**Deeper dive resources:**
+
+**Alternative viewpoints to explore:**
+
+## Writing Approach Checklist
+- [ ] Conversational and reflective tone
+- [ ] Focus on "why" and "how it works"
+- [ ] Avoid step-by-step instructions
+- [ ] Avoid reference-style lists
+- [ ] Include personal perspective where appropriate
+- [ ] Make connections across concepts
+- [ ] Use analogies and mental models
+- [ ] Build understanding progressively
+- [ ] Address design decisions and trade-offs
+- [ ] Keep scope focused but provide broader context
