@@ -30,7 +30,7 @@ book:
         - 14-education.qmd
         - 15-research.qmd
   appendices:
-    - templates/chapter_planning_template.qmd
+    - guidance/chapter_planning_template.qmd
 
 editor: source
 
