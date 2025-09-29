@@ -1,3 +1,0 @@
-# Community and Ethics
-
-<!-- Responsible AI practices in R communities -->
