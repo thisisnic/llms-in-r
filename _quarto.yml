@@ -1,0 +1,49 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "LLMs in R"
+  chapters:
+    - index.qmd
+    - part: "Getting Started"
+      chapters:
+        - 02-getting-started.qmd
+        - 03-landscape.qmd
+        - 04-packages.qmd
+    - part: "Security and Best Practices"
+      chapters:
+        - 05-fundamentals.qmd
+        - 06-privacy.qmd
+    - part: "Applications"
+      chapters:
+        - 07-code-gen.qmd
+        - 08-text-analysis.qmd
+        - 09-shiny-apps.qmd
+    - part: "Production and Advanced Topics"
+      chapters:
+        - 10-production.qmd
+        - 11-education.qmd
+        - 12-research.qmd
+        - 13-community.qmd
+        - 14-future.qmd
+  appendices:
+    - templates/chapter_planning_template.qmd
+
+editor: source
+
+execute:
+  freeze: auto
+
+format:
+  html:
+    theme: cosmo
+    df-print: paged
+    fig-width: 8
+    fig-height: 6
+    reader-mode: true
+    repo-branch: main
+    repo-actions: [source, issue]
+    page-footer:
+      right: |
+        This book was built with <a href="https://quarto.org/">Quarto</a>.
