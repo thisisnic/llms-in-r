@@ -7,27 +7,28 @@ book:
   chapters:
     - index.qmd
     - 01-introduction.qmd
+    - 02-risks-ethics.qmd
     - part: "Getting Started"
       chapters:
-        - 02-getting-started.qmd
-        - 03-landscape.qmd
-        - 04-packages.qmd
+        - 03-getting-started.qmd
+        - 04-model-selection.qmd
+        - 05-packages.qmd
     - part: "Security and Best Practices"
       chapters:
-        - 05-fundamentals.qmd
-        - 06-privacy.qmd
+        - 06-fundamentals.qmd
+        - 07-privacy.qmd
     - part: "Applications"
       chapters:
-        - 07-code-gen.qmd
-        - 08-text-analysis.qmd
-        - 09-shiny-apps.qmd
+        - 08-code-gen.qmd
+        - 09-data-analysis.qmd
+        - 10-text-analysis.qmd
+        - 11-shiny-apps.qmd
     - part: "Production and Advanced Topics"
       chapters:
-        - 10-production.qmd
-        - 11-education.qmd
-        - 12-research.qmd
-        - 13-community.qmd
-        - 14-future.qmd
+        - 12-rag.qmd
+        - 13-production.qmd
+        - 14-education.qmd
+        - 15-research.qmd
   appendices:
     - templates/chapter_planning_template.qmd
 
