@@ -1,0 +1,3 @@
+# Future Directions
+
+<!-- Emerging trends and R ecosystem evolution -->

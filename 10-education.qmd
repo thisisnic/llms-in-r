@@ -1,0 +1,3 @@
+# Educational Use Cases
+
+<!-- Teaching with and about LLMs -->
