@@ -89,6 +89,25 @@ jobs:
 
               return '\n'.join(prose_lines)
 
+          def get_readability_label(score):
+              """Get readability label based on Flesch Reading Ease score."""
+              if score >= 90:
+                  return "Very easy to read"
+              elif score >= 80:
+                  return "Easy to read"
+              elif score >= 70:
+                  return "Fairly easy to read"
+              elif score >= 60:
+                  return "Plain English"
+              elif score >= 50:
+                  return "Fairly difficult to read"
+              elif score >= 30:
+                  return "Difficult to read"
+              elif score >= 10:
+                  return "Very difficult to read"
+              else:
+                  return "Extremely difficult to read"
+
           changed_files = """${{ steps.changed-files.outputs.all_changed_files }}"""
           files = changed_files.split()
 
@@ -107,14 +126,12 @@ jobs:
                       results.append("")
                       continue
 
-                  # Calculate Flesch-Kincaid Grade Level
-                  fk_grade = textstat.flesch_kincaid_grade(prose_content)
                   # Calculate Flesch Reading Ease
                   fre_score = textstat.flesch_reading_ease(prose_content)
+                  label = get_readability_label(fre_score)
 
                   results.append(f"**{file}**")
-                  results.append(f"- Flesch-Kincaid Grade Level: {fk_grade:.2f}")
-                  results.append(f"- Flesch Reading Ease: {fre_score:.2f}")
+                  results.append(f"- Flesch Reading Ease: {fre_score:.2f} ({label})")
                   results.append("")
               except Exception as e:
                   results.append(f"**{file}**: Error - {str(e)}")
