@@ -32,8 +32,8 @@
     ]
   },
   {
-    "objectID": "templates/chapter_planning_template.html",
-    "href": "templates/chapter_planning_template.html",
+    "objectID": "guidance/chapter_planning_template.html",
+    "href": "guidance/chapter_planning_template.html",
     "title": "Appendix A — Chapter Planning Template: Explanation",
     "section": "",
     "text": "A.1 Chapter Scope Definition\nCore question this chapter answers:\nKey understanding readers will gain:",
@@ -43,8 +43,8 @@
     ]
   },
   {
-    "objectID": "templates/chapter_planning_template.html#context-and-background",
-    "href": "templates/chapter_planning_template.html#context-and-background",
+    "objectID": "guidance/chapter_planning_template.html#context-and-background",
+    "href": "guidance/chapter_planning_template.html#context-and-background",
     "title": "Appendix A — Chapter Planning Template: Explanation",
     "section": "A.2 Context and Background",
     "text": "A.2 Context and Background\n\nHistorical background:\nWhy this topic matters:\nConnection to broader domain:",
@@ -54,8 +54,8 @@
     ]
   },
   {
-    "objectID": "templates/chapter_planning_template.html#conceptual-foundation",
-    "href": "templates/chapter_planning_template.html#conceptual-foundation",
+    "objectID": "guidance/chapter_planning_template.html#conceptual-foundation",
+    "href": "guidance/chapter_planning_template.html#conceptual-foundation",
     "title": "Appendix A — Chapter Planning Template: Explanation",
     "section": "A.3 Conceptual Foundation",
     "text": "A.3 Conceptual Foundation",
@@ -65,8 +65,8 @@
     ]
   },
   {
-    "objectID": "templates/chapter_planning_template.html#main-concepts-to-explain",
-    "href": "templates/chapter_planning_template.html#main-concepts-to-explain",
+    "objectID": "guidance/chapter_planning_template.html#main-concepts-to-explain",
+    "href": "guidance/chapter_planning_template.html#main-concepts-to-explain",
     "title": "Appendix A — Chapter Planning Template: Explanation",
     "section": "A.4 Main concepts to explain:",
     "text": "A.4 Main concepts to explain:\n\n\n\n\nBest analogies or metaphors:\nMental models to build:",
@@ -76,8 +76,8 @@
     ]
   },
   {
-    "objectID": "templates/chapter_planning_template.html#design-and-decision-space",
-    "href": "templates/chapter_planning_template.html#design-and-decision-space",
+    "objectID": "guidance/chapter_planning_template.html#design-and-decision-space",
+    "href": "guidance/chapter_planning_template.html#design-and-decision-space",
     "title": "Appendix A — Chapter Planning Template: Explanation",
     "section": "A.5 Design and Decision Space",
     "text": "A.5 Design and Decision Space\n\nKey design decisions to explain:\nAlternative approaches to discuss:\nTrade-offs to acknowledge:",
@@ -87,8 +87,8 @@
     ]
   },
   {
-    "objectID": "templates/chapter_planning_template.html#connections-and-relationships",
-    "href": "templates/chapter_planning_template.html#connections-and-relationships",
+    "objectID": "guidance/chapter_planning_template.html#connections-and-relationships",
+    "href": "guidance/chapter_planning_template.html#connections-and-relationships",
     "title": "Appendix A — Chapter Planning Template: Explanation",
     "section": "A.6 Connections and Relationships",
     "text": "A.6 Connections and Relationships\n\nRelated concepts to link:\nInterdependencies to highlight:\nBroader ecosystem connections:",
@@ -98,8 +98,8 @@
     ]
   },
   {
-    "objectID": "templates/chapter_planning_template.html#perspective-and-opinion",
-    "href": "templates/chapter_planning_template.html#perspective-and-opinion",
+    "objectID": "guidance/chapter_planning_template.html#perspective-and-opinion",
+    "href": "guidance/chapter_planning_template.html#perspective-and-opinion",
     "title": "Appendix A — Chapter Planning Template: Explanation",
     "section": "A.7 Perspective and Opinion",
     "text": "A.7 Perspective and Opinion\n\nYour viewpoint on this topic:\nAlternative perspectives to acknowledge:\nJudgments you can make:",
@@ -109,8 +109,8 @@
     ]
   },
   {
-    "objectID": "templates/chapter_planning_template.html#boundaries-and-constraints",
-    "href": "templates/chapter_planning_template.html#boundaries-and-constraints",
+    "objectID": "guidance/chapter_planning_template.html#boundaries-and-constraints",
+    "href": "guidance/chapter_planning_template.html#boundaries-and-constraints",
     "title": "Appendix A — Chapter Planning Template: Explanation",
     "section": "A.8 Boundaries and Constraints",
     "text": "A.8 Boundaries and Constraints\n\nImportant limitations:\nCommon misunderstandings:\nConstraints to discuss:",
@@ -120,8 +120,8 @@
     ]
   },
   {
-    "objectID": "templates/chapter_planning_template.html#further-understanding",
-    "href": "templates/chapter_planning_template.html#further-understanding",
+    "objectID": "guidance/chapter_planning_template.html#further-understanding",
+    "href": "guidance/chapter_planning_template.html#further-understanding",
     "title": "Appendix A — Chapter Planning Template: Explanation",
     "section": "A.9 Further Understanding",
     "text": "A.9 Further Understanding\n\nRelated explanation topics:\nDeeper dive resources:\nAlternative viewpoints to explore:",
@@ -131,8 +131,8 @@
     ]
   },
   {
-    "objectID": "templates/chapter_planning_template.html#writing-approach-checklist",
-    "href": "templates/chapter_planning_template.html#writing-approach-checklist",
+    "objectID": "guidance/chapter_planning_template.html#writing-approach-checklist",
+    "href": "guidance/chapter_planning_template.html#writing-approach-checklist",
     "title": "Appendix A — Chapter Planning Template: Explanation",
     "section": "A.10 Writing Approach Checklist",
     "text": "A.10 Writing Approach Checklist\n\nConversational and reflective tone\nFocus on “why” and “how it works”\nAvoid step-by-step instructions\nAvoid reference-style lists\nInclude personal perspective where appropriate\nMake connections across concepts\nUse analogies and mental models\nBuild understanding progressively\nAddress design decisions and trade-offs\nKeep scope focused but provide broader context",
