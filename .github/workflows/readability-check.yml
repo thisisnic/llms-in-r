@@ -4,9 +4,6 @@ on:
   pull_request:
     paths:
       - '**.qmd'
-  push:
-    paths:
-      - '**.qmd'
 
 permissions:
   contents: read
