@@ -1,0 +1,164 @@
+name: Readability Check
+
+on:
+  pull_request:
+    paths:
+      - '**.qmd'
+
+permissions:
+  contents: read
+
+jobs:
+  readability:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get changed qmd files
+        id: changed-files
+        uses: tj-actions/changed-files@v44
+        with:
+          files: |
+            **.qmd
+
+      - name: Set up Python
+        if: steps.changed-files.outputs.any_changed == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        if: steps.changed-files.outputs.any_changed == 'true'
+        run: |
+          pip install textstat
+
+      - name: Check readability scores
+        if: steps.changed-files.outputs.any_changed == 'true'
+        run: |
+          python3 << 'EOF'
+          import textstat
+          import sys
+          import re
+
+          def extract_prose_from_qmd(content):
+              """Extract only prose text from Quarto markdown, excluding code chunks and YAML."""
+              lines = content.split('\n')
+              prose_lines = []
+              in_code_chunk = False
+              in_yaml = False
+
+              for i, line in enumerate(lines):
+                  # Check for YAML frontmatter at start
+                  if i == 0 and line.strip() == '---':
+                      in_yaml = True
+                      continue
+
+                  # End of YAML frontmatter
+                  if in_yaml and line.strip() == '---':
+                      in_yaml = False
+                      continue
+
+                  # Skip YAML lines
+                  if in_yaml:
+                      continue
+
+                  # Check for code chunk start (```{lang} or ```)
+                  if re.match(r'^```', line):
+                      in_code_chunk = not in_code_chunk
+                      continue
+
+                  # Skip code chunk content
+                  if in_code_chunk:
+                      continue
+
+                  # Remove inline code
+                  line = re.sub(r'`[^`]+`', '', line)
+
+                  # Remove HTML comments
+                  line = re.sub(r'<!--.*?-->', '', line)
+
+                  # Keep the line if it has content
+                  if line.strip():
+                      prose_lines.append(line)
+
+              return '\n'.join(prose_lines)
+
+          def get_readability_label(score):
+              """Get readability label based on Flesch Reading Ease score."""
+              if score >= 90:
+                  return "Very easy to read"
+              elif score >= 80:
+                  return "Easy to read"
+              elif score >= 70:
+                  return "Fairly easy to read"
+              elif score >= 60:
+                  return "Plain English"
+              elif score >= 50:
+                  return "Fairly difficult to read"
+              elif score >= 30:
+                  return "Difficult to read"
+              elif score >= 10:
+                  return "Very difficult to read"
+              else:
+                  return "Extremely difficult to read"
+
+          changed_files = """${{ steps.changed-files.outputs.all_changed_files }}"""
+          files = changed_files.split()
+
+          failed_files = []
+          passed_files = []
+
+          for file in files:
+              try:
+                  with open(file, 'r', encoding='utf-8') as f:
+                      content = f.read()
+
+                  # Extract only prose content
+                  prose_content = extract_prose_from_qmd(content)
+
+                  if not prose_content.strip():
+                      print(f"✓ {file}: No prose content found (skipped)")
+                      continue
+
+                  # Count words
+                  word_count = len(prose_content.split())
+
+                  # Check if under word threshold
+                  if word_count <= 50:
+                      print(f"✓ {file}: {word_count} words (under 50 word threshold)")
+                      passed_files.append(file)
+                      continue
+
+                  # Calculate Flesch Reading Ease (only if over word threshold)
+                  fre_score = textstat.flesch_reading_ease(prose_content)
+                  label = get_readability_label(fre_score)
+
+                  if fre_score > 59:
+                      print(f"✓ {file}: {round(fre_score)} ({label}) - {word_count} words")
+                      passed_files.append(file)
+                  else:
+                      print(f"✗ {file}: {round(fre_score)} ({label}) - {word_count} words (below threshold of 60)")
+                      failed_files.append((file, fre_score, word_count, label))
+
+              except Exception as e:
+                  print(f"✗ {file}: Error - {str(e)}")
+                  failed_files.append((file, 0, 0, str(e)))
+
+          if failed_files:
+              print("\n❌ Readability check failed!")
+              print("\nFiles with readability issues:")
+              for file_info in failed_files:
+                  if len(file_info) == 4:
+                      file, score, word_count, label = file_info
+                      if word_count > 0:
+                          print(f"  - {file}: score {round(score)} ({label}) with {word_count} words")
+                      else:
+                          print(f"  - {file}: {label}")
+              sys.exit(1)
+          else:
+              print("\n✅ All files pass readability check!")
+          EOF
