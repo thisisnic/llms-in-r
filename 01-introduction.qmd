@@ -1,3 +1,5 @@
 # Introduction
 
 <!-- Introduction to the book -->
+
+I will be deleting this text but I want to test that we can calculate readability score! I wonder what number will be generated here.
