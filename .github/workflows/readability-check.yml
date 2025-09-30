@@ -127,15 +127,17 @@ jobs:
                   # Count words
                   word_count = len(prose_content.split())
 
-                  # Calculate Flesch Reading Ease
+                  # Check if under word threshold
+                  if word_count <= 50:
+                      print(f"✓ {file}: {word_count} words (under 50 word threshold)")
+                      passed_files.append(file)
+                      continue
+
+                  # Calculate Flesch Reading Ease (only if over word threshold)
                   fre_score = textstat.flesch_reading_ease(prose_content)
                   label = get_readability_label(fre_score)
 
-                  # Check if passes (score > 59 or <= 50 words)
-                  if word_count <= 50:
-                      print(f"✓ {file}: {round(fre_score)} ({label}) - {word_count} words (under 50 word threshold)")
-                      passed_files.append(file)
-                  elif fre_score > 59:
+                  if fre_score > 59:
                       print(f"✓ {file}: {round(fre_score)} ({label}) - {word_count} words")
                       passed_files.append(file)
                   else:
